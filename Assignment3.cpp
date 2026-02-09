@@ -3,7 +3,7 @@
 #include <limits> 
 
 int main() {
-// declare variables to store user input
+
     std::string instructorName, yourName, food, adjective, color, animal;
     int number;
 
@@ -20,15 +20,15 @@ int main() {
     while(true){
         std::cout << "Enter a number between 100 and 120:";
         if(std::cin >> number && number >= 100 && number <= 120) {
-          break; // valid input, exit loop
+          break; 
         } else {
           std::cout << "Invalid input. Please enter a number between 100 and 120." << std::endl;
-          std::cin.clear(); // clear error state
-          std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //discard invalid input 
+          std::cin.clear(); 
+          std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         
         }
     }
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // clear input buffer 
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  
 
     std::cout << "Enter and adjective:";
     std::getline(std::cin, adjective);
